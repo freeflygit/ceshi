@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    li,
+    ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(172, 172, 172);
+    }
+
+    table {
+        border: 1px solid purple;
+        border-radius: 4px;
+        padding: 50px;
+        background-color: rgba(118, 117, 117, 0.1);
+
+
+        box-shadow: 2px 2px 20px gray;
+    }
+
+    [name=captcha] {
+        width: 101px;
+    }
+
+    body {
+        background: url('../img/hero-bg.jpg') no-repeat;
+        width: 1600px;
+        height: 520px;
+        background-size: 1600px 520px;
+    }
+
+    .d2 {
+        padding-top: 100px;
+        padding-left: 430px;
+    }
+
+    .d1 {
+        padding-left: 200px;
+    }
+
+    .d1>ul>li {
+        float: left;
+        padding: 8px;
+    }
+
+    .d1::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        <ul>
+            <li><a href="">首页</a></li>
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+            <li><a href="">我的博客</a></li>
+        </ul>
+    </div>
+    <form action="login.php" method="post" width="284px">
+        <!-- table>tr*4>td*2 -->
+        <div class="d2">
+            <table align="center">
+                <tr>
+                    <td>用户名</td>
+                    <td>
+                        <input type="text" name="user">
+                    </td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td>
+                        <input type="password" name="pwd">
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">验证码</td>
+                    <td>
+                        <input type="text" name="captcha">
+                        <br>
+                        <img src="libs/test.php" height="30">
+					</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="登录">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>
